@@ -60,12 +60,3 @@ class OrderFeedPage(BasePage):
         self.get_order_feed_page()
         locator_formatted = self.format_locators(OrderFeedLocators.ORDER_IN_WORK, order_number_str)
         return self.find_element_with_wait(locator_formatted)
-
-
-
-
-    # def find_order_in_work(self):
-    #     order_number = str(self.create_order_and_get_order_number())
-    #     self.get_order_feed_page()
-    #     locator_formatted = self.format_locators(OrderFeedLocators.ORDER_IN_WORK, order_number)
-    #     return self.find_element_with_wait(locator_formatted)

@@ -2,6 +2,7 @@ import allure
 
 from pages.personal_account_page import PersonalAccountPage
 
+@allure.feature('Личный кабинет')
 class TestPersonalAccount:
 
     @allure.title('Проверка перехода по клику на «Личный кабинет»')

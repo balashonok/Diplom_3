@@ -2,6 +2,7 @@ import allure
 
 from pages.recover_password_page import RecoverPasswordPage
 
+@allure.feature('Восстановление пароля')
 class TestRecoverPassword:
 
     @allure.title('Проверка перехода на страницу восстановления пароля по кнопке «Восстановить пароль»')

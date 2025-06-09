@@ -3,10 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 
-from pages.base_page import BasePage
-from data.urls import URLs
-from data.data import USER_EMAIL, USER_PASSWORD
-from locators.general_page_locators import GeneralPageLocators
+from pages.login_page import LoginPage
 
 @pytest.fixture(params=["chrome", "firefox"])
 def driver(request):
@@ -25,8 +22,5 @@ def driver(request):
 
 @pytest.fixture
 def login(driver):
-    page = BasePage(driver)
-    page.get_url(URLs.LOGIN_PAGE)
-    page.add_text_to_element(GeneralPageLocators.EMAIL_INPUT, USER_EMAIL)
-    page.add_text_to_element(GeneralPageLocators.PASSWORD_INPUT, USER_PASSWORD)
-    page.click_to_element_with_wait(GeneralPageLocators.LOGIN_BUTTON)
+    page = LoginPage(driver)
+    page.user_login()

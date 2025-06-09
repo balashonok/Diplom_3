@@ -2,6 +2,7 @@ import allure
 
 from pages.order_feed_page import OrderFeedPage
 
+@allure.feature('Раздел «Лента заказов»')
 class TestOrderFeed:
 
     @allure.title('При клике на заказ, открывается всплывающее окно с деталями')

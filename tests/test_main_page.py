@@ -2,6 +2,7 @@ import allure
 
 from pages.main_page import MainPage
 
+@allure.feature('Проверка основного функционала')
 class TestMainPage:
 
     @allure.title('Переход по клику на «Конструктор»')
